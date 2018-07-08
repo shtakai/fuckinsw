@@ -1,0 +1,23 @@
+{
+  "name": "fuckinsw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shtakai/fuckinsw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shtakai/fuckinsw/issues"
+  },
+  "homepage": "https://github.com/shtakai/fuckinsw#readme",
+  "devDependencies": {
+    "jest": "^23.3.0",
+    "mocha": "^5.2.0"
+  }
+}
