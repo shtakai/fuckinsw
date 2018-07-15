@@ -1,3 +1,18 @@
-test('add 1+1 to eq 3', () => {
-  expect(1+1).toBe(2)
+const printBoard = require('../src/minesweeper')
+
+describe('printBoard', () => {
+test('simple board', () => {
+  const board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+  ]
+  expect(printBoard(board)).toBe('  |   |  \n  |   |  \n  |   |  \n')
+
+  board[0][1] = '1'
+  board[2][2] = 'B'
+
+  expect(printBoard(board)).toBe('  | 1 |  \n  |   |  \n  |   | B\n')
+})
+
 })
