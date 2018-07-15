@@ -5,7 +5,6 @@ const printBoard = board => {
     printBoard += col.join(' | ')
     printBoard += '\n'
   }
-  console.log(printBoard)
   return printBoard
 }
 
