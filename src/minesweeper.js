@@ -1,14 +1,10 @@
-// Run node minesweeper.js to run this code.
+const printBoard = board => {
+  let printBoard = 'Current Board:\n'
+  for (let col of board) {
+    printBoard += col.join(' | ')
+    printBoard += '\n'
+  }
+  return printBoard
+}
 
-const blankLine = '  |   |  '
-console.log('This is what an empty board would look like:');
-console.log(blankLine)
-console.log(blankLine)
-console.log(blankLine)
-
-const guessLine = '1 |   |  '
-const bombLine = '  | B |  '
-console.log('This is what a board with a guess and a bomb on it would look like: ')
-console.log(guessLine)
-console.log(bombLine)
-console.log(blankLine)
+module.exports = printBoard
