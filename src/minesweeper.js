@@ -1,14 +1,22 @@
-// Run node minesweeper.js to run this code.
+const printBoard = board => {
+  console.log(`Current Board:`)
+  let printBoard = ''
+  for (let col of board) {
+    printBoard += col.join(' | ')
+    printBoard += '\n'
+  }
+  console.log(printBoard)
+}
 
-const blankLine = '  |   |  '
-console.log('This is what an empty board would look like:');
-console.log(blankLine)
-console.log(blankLine)
-console.log(blankLine)
+const board = [
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+  [' ', ' ', ' ']
+]
 
-const guessLine = '1 |   |  '
-const bombLine = '  | B |  '
-console.log('This is what a board with a guess and a bomb on it would look like: ')
-console.log(guessLine)
-console.log(bombLine)
-console.log(blankLine)
+printBoard(board)
+
+board[0][1] = '1'
+board[2][2] = 'B'
+
+printBoard(board)
