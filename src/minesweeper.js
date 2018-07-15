@@ -1,6 +1,5 @@
 const printBoard = board => {
-  console.log(`Current Board:`)
-  let printBoard = ''
+  let printBoard = 'Current Board:\n'
   for (let col of board) {
     printBoard += col.join(' | ')
     printBoard += '\n'
