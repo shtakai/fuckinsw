@@ -36,12 +36,7 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs = 0) => 
   }
 
 const printBoard = board => {
-  let outputBoard = 'Current Board:\n'
-  for (let col of board) {
-    outputBoard += col.join(' | ')
-    outputBoard += '\n'
-  }
-  return outputBoard
+  return board.map(row => row.join(' | ')).join('\n')
 }
 
 module.exports = {
