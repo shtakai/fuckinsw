@@ -1,8 +1,8 @@
 const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
   let board = []
-  for (let i = 0; i < numberOfRows; i++) {
+  for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
     let row = []
-    for (let j = 0; j < numberOfColumns; j++) {
+    for (let columnIndex = 0; columnIndex < numberOfColumns; columnIndex++) {
       row.push(' ')
     }
     board.push(row)
