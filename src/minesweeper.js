@@ -13,9 +13,9 @@ const generatePlayerBoard = (numberOfRows, numberOfColumns) => {
 const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs = 0) => {
   let numberOfBombsPlaced = 0
   let board = []
-  for (let i = 0; i < numberOfRows; i++) {
+  for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
     let row = []
-    for (let j = 0; j < numberOfColumns; j++) {
+    for (let columnIndex = 0; columnIndex <  numberOfColumns; columnIndex++) {
       row.push(null)
     }
     board.push(row)
