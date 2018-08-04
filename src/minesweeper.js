@@ -46,5 +46,13 @@ module.exports = {
 }
 
 // console.log(generatePlayerBoard(2,4))
-// console.log(printBoard(generatePlayerBoard(2,4)))
+// console.log(printBoard(generateBombBoard(2, 3, 4)))
 // console.log(generateBombBoard(3,4,2))
+//
+
+let playerBoard = generatePlayerBoard(3, 4)
+let bombBoard = generateBombBoard(3, 4, 5)
+console.log('Player Board: ')
+console.log(printBoard(playerBoard))
+console.log('Bomb Board: ')
+console.log(printBoard(bombBoard))
