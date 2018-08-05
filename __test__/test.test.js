@@ -1,5 +1,5 @@
 const {printBoard, generatePlayerBoard, generateBombBoard} = require('../src/minesweeper')
-const {flatten} = require('../lib/flatten')
+const flatten = require('arr-flatten')
 
 describe('printBoard', () => {
   test('simple board', () => {
