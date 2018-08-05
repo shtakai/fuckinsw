@@ -64,8 +64,10 @@ describe('generateBombBoard', () => {
 
   test('10x10 board with 10 bombs', () => {
     const board = generateBombBoard(10, 10, 10)
-    let flattenBoard = []
-    board.forEach(row => row.forEach(column => {flattenBoard.push(column)}))
+    let flattenBoard = board.reduce((arr, row) => {
+      row.forEach(column => arr.push(column))
+      return arr
+    }, [])
     expect(flattenBoard.filter(el => el === 'B').length).toEqual(10)
   })
 })
