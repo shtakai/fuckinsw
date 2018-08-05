@@ -1,4 +1,5 @@
 const {printBoard, generatePlayerBoard, generateBombBoard} = require('../src/minesweeper')
+const {flatten} = require('../lib/flatten')
 
 describe('printBoard', () => {
   test('simple board', () => {
@@ -64,10 +65,7 @@ describe('generateBombBoard', () => {
 
   test('10x10 board with 10 bombs', () => {
     const board = generateBombBoard(10, 10, 10)
-    let flattenBoard = board.reduce((arr, row) => {
-      row.forEach(column => arr.push(column))
-      return arr
-    }, [])
+    const flattenBoard = flatten(board)
     expect(flattenBoard.filter(el => el === 'B').length).toEqual(10)
   })
 })
