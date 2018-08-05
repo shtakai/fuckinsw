@@ -64,7 +64,10 @@ describe('generateBombBoard', () => {
 
   test('10x10 board with 10 bombs', () => {
     const board = generateBombBoard(10, 10, 10)
-    const flattenBoard = Array.prototype.concat.apply([], board)
+    let flattenBoard = board.reduce((arr, row) => {
+      row.forEach(column => arr.push(column))
+      return arr
+    }, [])
     expect(flattenBoard.filter(el => el === 'B').length).toEqual(10)
   })
 })
