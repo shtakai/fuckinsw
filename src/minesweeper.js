@@ -23,17 +23,17 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs = 0) => 
 
   // Add bombs
   while (numberOfBombsPlaced < numberOfBombs) {
-    let randomRowIndex = parseInt(Math.random() * numberOfRows)
-    let randomColumnIndex = parseInt(Math.random() * numberOfColumns)
+    let randomRowIndex = Math.floor(Math.random() * numberOfRows)
+    let randomColumnIndex = Math.floor(Math.random() * numberOfColumns)
     // inclease counter if bomb can be set.
-    if (board[randomRowIndex][randomColumnIndex] === null) {
+    if (board[randomRowIndex][randomColumnIndex] !== 'B') {
       board[randomRowIndex][randomColumnIndex] = 'B'
       numberOfBombsPlaced++
     }
   }
 
   return board
-  }
+}
 
 const printBoard = board => {
   return board.map(row => row.join(' | ')).join('\n')
